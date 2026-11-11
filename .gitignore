@@ -27,8 +27,12 @@ migrate_working_dir/
 .flutter-plugins-dependencies
 .pub-cache/
 .pub/
-/build/
 /coverage/
+# Ignore build artifacts but keep build/web for Vercel
+/build/
+!/build/
+!/build/web/
+!/build/web/**
 
 # ─── Firebase ─────────────────────────────────────────────────────────────────
 # google-services.json contains API keys — keep out of public repos.
@@ -41,9 +45,11 @@ ios/Runner/GoogleService-Info.plist
 # lib/firebase_options.dart
 
 # ─── Cloudinary credentials ───────────────────────────────────────────────────
-# lib/config/cloudinary_config.dart contains your cloud name & upload preset.
-# Uncomment the line below if the repo is public.
-# lib/config/cloudinary_config.dart
+lib/config/cloudinary_config.dart
+
+# ─── Archives locales ─────────────────────────────────────────────────────────
+lib.zip
+*.zip
 
 # ─── Environment / secrets ────────────────────────────────────────────────────
 .env
