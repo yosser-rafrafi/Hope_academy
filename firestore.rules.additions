@@ -1,0 +1,17 @@
+// Add inside `match /databases/{database}/documents { ... }`
+// Replace isStaff() with your existing helper (admin / subAdmin / teacher).
+
+match /mood_checkins/{id} {
+  // A family can only write check-ins for itself, with a valid mood value.
+  allow create: if request.auth != null
+    && request.resource.data.parentId == request.auth.uid
+    && request.resource.data.mood in
+         ['excellent', 'good', 'neutral', 'difficult', 'veryDifficult'];
+
+  // The family reads its own; staff can read them to follow the child's mood.
+  allow read: if request.auth != null
+    && (resource.data.parentId == request.auth.uid || isStaff());
+
+  // Immutable history.
+  allow update, delete: if false;
+}

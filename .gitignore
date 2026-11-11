@@ -1,0 +1,92 @@
+# ─── Miscellaneous ────────────────────────────────────────────────────────────
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+# ─── IDE ──────────────────────────────────────────────────────────────────────
+*.iml
+*.ipr
+*.iws
+.idea/
+.vscode/
+
+# ─── Flutter / Dart / Pub ─────────────────────────────────────────────────────
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+/coverage/
+
+# ─── Firebase ─────────────────────────────────────────────────────────────────
+# google-services.json contains API keys — keep out of public repos.
+# If your repo is PRIVATE you can remove these two lines.
+android/app/google-services.json
+ios/Runner/GoogleService-Info.plist
+
+# firebase_options.dart is auto-generated and contains API keys.
+# Same rule: uncomment if public repo.
+# lib/firebase_options.dart
+
+# ─── Cloudinary credentials ───────────────────────────────────────────────────
+# lib/config/cloudinary_config.dart contains your cloud name & upload preset.
+# Uncomment the line below if the repo is public.
+# lib/config/cloudinary_config.dart
+
+# ─── Environment / secrets ────────────────────────────────────────────────────
+.env
+.env.*
+*.secret
+secrets.dart
+secrets.json
+
+# ─── Android ──────────────────────────────────────────────────────────────────
+/android/app/debug
+/android/app/profile
+/android/app/release
+/android/.gradle/
+/android/local.properties
+# Signing key — NEVER commit
+*.jks
+*.keystore
+key.properties
+
+# ─── iOS ──────────────────────────────────────────────────────────────────────
+**/ios/Pods/
+**/ios/.symlinks/
+**/ios/Flutter/Flutter.framework
+**/ios/Flutter/Flutter.podspec
+**/ios/Flutter/Generated.xcconfig
+**/ios/Flutter/ephemeral/
+
+# ─── macOS ────────────────────────────────────────────────────────────────────
+**/macos/Flutter/GeneratedPluginRegistrant.swift
+**/macos/Flutter/ephemeral/
+
+# ─── Web ──────────────────────────────────────────────────────────────────────
+# /build/ already covers build/web — no extra rule needed
+
+# ─── Symbolication / Obfuscation ──────────────────────────────────────────────
+app.*.symbols
+app.*.map.json
+
+# ─── OS generated ─────────────────────────────────────────────────────────────
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ─── Script de test local ─────────────────────────────────────────────────────
+run_mobile.ps1
